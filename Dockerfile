@@ -11,7 +11,8 @@ RUN \
   . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION} && \
   . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION} && \
   . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION} && \
-  #ln -s $NVM_DIR/versions/node/v${NODE_VERSION}/bin/node /usr/bin/ && \
-  #ln -s $NVM_DIR/versions/node/v${NODE_VERSION}/bin/npm  /usr/bin/ && \
+  #ln -s $NVM_DIR/versions/node/v${NODE_VERSION}/bin/n* /usr/bin/ && \
   pip install -U pip && pip install pipenv && \
   rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT /bin/bash
